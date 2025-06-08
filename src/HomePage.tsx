@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./styles/HomePage.css"
 
 const HomePage = () => {
@@ -11,7 +12,7 @@ const HomePage = () => {
                 <h1>🎓 Student Portal</h1>
             </div>
             <div className="search-div">
-                <button>📚 View All Students</button>
+                <Link to="/students"><button>📚 View All Students</button></Link>
                 <input type="text" />
                 <button>🔍Search</button>
             </div>
