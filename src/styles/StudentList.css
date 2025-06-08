@@ -1,0 +1,41 @@
+.student-list-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.student-list-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.student-cards-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.student-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.student-card button {
+    background-color: rgb(33, 158, 200);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
