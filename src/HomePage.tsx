@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import "./styles/HomePage.css"
 
 const HomePage = () => {
+    const [query, setQuery] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        const params = new URLSearchParams();
+        if (query) params.set(`name`, query);
+        navigate(`/search?${params.toString()}`);
+    };
     return (
         <>
         <div className="container">
@@ -13,8 +22,11 @@ const HomePage = () => {
             </div>
             <div className="search-div">
                 <Link to="/students"><button>📚 View All Students</button></Link>
-                <input type="text" />
-                <button>🔍Search</button>
+                <input type="text"
+                value={query}
+                onChange={e => setQuery(e.target.value)} 
+                placeholder="Search students..."/>
+                <button onClick={handleSearch}>🔍Search</button>
             </div>
         </div>
         </>
